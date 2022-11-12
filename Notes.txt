@@ -1,0 +1,32 @@
+Client ID 7d1776d6c954455d927c277dba5d39ed
+PreRequire Library : 
+npm i spotify-web-api-js
+
+1- User LogIn: 
+			- Configer requiste url first containe: authEndPoint + clientId + Actions Allowed(Scopes) + ask for client Token In responce
+		"${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true" 
+	    scopes.join("%20") : Add " " to all scopes
+	    - click Button to readirect to Spotify LogIn Page
+	    - LoggedIn using google acount on responce we get the accecs token	
+	    - After loggedIn redirect to Profil Page 
+2- Get UserToken from url:  http://localhost:3000/#access_token=BQD3E8qm....5CUGWHWY&token_type=Bearer&expires_in=3600
+	export const userToken = () => {
+  return window.location.hash # get from #access_token=.... 
+    .substring(1)
+    .split("&") # cut on 3 parts ....token & ..... token-type ... & expires_in
+    .reduce((initial, item) => { # paassthrow evry parts 
+      let parts = item.split("="); # cut accecs-token && token
+      initial[parts[0]] = decodeURIComponent(parts[1]);
+
+      return initial;
+    }, {});
+3- Redirect to Profil if ther is token 
+4- Configer| connect the spotify API with react : 
+	- Install spotify web API 
+	- const spotify = new SpotifyWebApi();
+	- spotify.setAccessToken(_token)
+	- spotify.getMe().then((user)=>{ console.log(user) }) #getUser Details from spotify API
+5- configer Context API for the app : 
+6- design the sideBar & get client palyList using : spotify.getUserPlaylists()
+7- design Spotify Play bar in the footer
+8- design the Profil body

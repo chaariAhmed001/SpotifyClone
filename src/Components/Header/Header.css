@@ -1,0 +1,56 @@
+.header-contaier{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.header-left{
+    display: flex;
+    flex: 0.6;
+}
+.header-pagination{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prevButton,.pagination-NextButton{
+    background-color: rgba(0,0,0,.7);
+    color: white;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pagination-NextButton{
+    background-color: rgba(0,0,0,.5);
+}
+.header-search{
+    flex: 0.9;
+    margin-left : 40px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius:30px;
+    color: gray;
+    padding: 10px;
+}
+.header-search > input {
+    border: none;
+    width: 80%;
+    outline: none;
+    color: gray;
+}
+.header-profil{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 3px 10px;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 23px;
+    height: 32px;
+    cursor: pointer;
+}
+.header-profil *.MuiAvatar-root {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.header-profil  h4 {font-size: 0.875rem;}

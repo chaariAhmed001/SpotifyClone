@@ -1,0 +1,25 @@
+.login-component{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 100px;
+}
+.login-component > img{
+   height: 150px;
+}
+.login-component a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 99px;
+    font-weight: 800;
+    background-color: #1db954;
+}
+@media screen and (max-width: 780px) {
+    .login-component > img{
+        height: 100px;
+     }
+  }

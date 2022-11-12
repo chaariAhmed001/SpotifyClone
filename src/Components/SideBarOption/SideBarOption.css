@@ -1,0 +1,19 @@
+.sideBarOption-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    color: gray;
+    cursor: pointer;
+    height: 40px;
+    transition: 200ms color ease-in;
+}
+.sideBarOption-container:hover{
+    color: white;
+}
+.sideBarOption-container> p {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
