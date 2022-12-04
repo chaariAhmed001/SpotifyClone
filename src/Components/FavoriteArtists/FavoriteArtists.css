@@ -1,0 +1,69 @@
+.topArtists-conainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.artist-container{
+    border-radius: 10px;
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+.artist-container:hover{
+    cursor: pointer;
+    background-color: #2a2a2a;
+}
+.artist-container img{
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.6);
+}
+.artist-container strong{
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.artist-container p{
+    color: grey;
+    margin-bottom: 20px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .artist-container{
+     width: 33vw;
+    }
+    .artist-container img{
+        width: 32vw;
+        height: 100%;
+       }
+ }
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    .artist-container{
+     width: 38vw;
+    }
+    .artist-container img{
+        width: 32vw;
+        height: 100%;
+       }
+ }
+ @media only screen and (min-width: 601px) and (max-width: 770px) {
+    .artist-container{
+     width: 20vw;
+    }
+    .artist-container img{
+        width: 19vw;
+        height: 100%;
+       }
+ } 
+ @media only screen and (min-width: 771px) and (max-width: 900px) {
+    .artist-container{
+     width: 26vw;
+    }
+    
+ } 

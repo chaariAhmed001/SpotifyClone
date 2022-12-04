@@ -11,7 +11,7 @@ import Grid from '@mui/material/Grid';
 import Slider from '@mui/material/Slider';
 import PauseCircleFilledIcon from '@mui/icons-material/PauseCircleFilled';
 import { useStateValue } from '../../Context/StateProvider';
-import defaultImg from '../../Data/im.png'
+import img from '../../Data/im.png'
 const Footer = ({spotify}) => {
   const [{ playing,token,playerState }, dispatch] = useStateValue();
 
@@ -63,10 +63,12 @@ const Footer = ({spotify}) => {
       
     
       <div className='footter-SongDetails'>
-          <img className='albomeImg' src={playing? ( playing?.item)?(playing?.item?.album?.images[2]?.url) :playing.image : defaultImg} alt="albomeImg"  />
+          <img className='albumeImg' src={playing? ( playing?.item)?(playing?.item?.album?.images[2]?.url) :playing.image : img} alt="albomeImg"  />
           <div className="footer-songInfo">
             <h4>{( playing?.item)?playing?.item?.name : playing?.name }</h4>
             <p>{( playing?.item) ? playing?.item?.artists.map((artist) => artist.name).join(',') : playing?.artists?.map((artist)=>artist)}</p>
+            <p>{playing?.publisher}</p>
+
           </div>
       </div>
     

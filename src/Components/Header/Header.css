@@ -7,6 +7,9 @@
     display: flex;
     flex: 0.6;
 }
+.header-menuIcon{
+    display: none;
+}
 .header-pagination{
     display: flex;
     align-items: center;
@@ -54,3 +57,44 @@
     object-fit: contain;
 }
 .header-profil  h4 {font-size: 0.875rem;}
+
+@media only screen and (max-width: 600px) {
+    .header-contaier{
+        margin: 0 20px;
+    }
+    .header-profil{
+       gap: 2px;
+    }
+    .profil-name{
+        display: none;
+    }
+    .header-search{
+        margin-left: 10px;
+    }
+    .header-menuIcon{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        opacity: 0.6;
+    }
+    .header-menuIcon:hover{
+       opacity: 1;
+    }
+    
+}
+@media only screen and (max-width: 800px) {
+    .header-pagination{
+        display: none;
+    }
+    .header-left{
+        flex: 0.8;
+    }
+    .header-search{
+        margin-left: 0px;
+    }
+}
+@media only screen and (min-width: 900px) and (max-width:1000px){
+    .header-left{
+        flex: 0.8;
+    }
+}

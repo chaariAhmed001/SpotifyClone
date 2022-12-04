@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useStateValue } from '../../Context/StateProvider';
-import {Header,Banner,SongsBody} from '../index'
+import {Header,Banner,SongsBody,AlbumDetails} from '../index'
 import './ProfileBody.css'
+import {Home,Artist, Search, CategoryPlaylists, SearchResults} from '../../Pages/index'
 const ProfileBody = ({spotify}) => {
   
-  const [{ token, selectedPlaylistId,selectedPlaylist}, dispatch] = useStateValue();
+  const [{ token, selectedPlaylistId,selectedPlaylist , selectedRoote}, dispatch] = useStateValue();
   useEffect(() => {
     if(token && selectedPlaylistId){
       spotify.getPlaylist(selectedPlaylistId).then(async (data) => {
@@ -34,12 +35,22 @@ const ProfileBody = ({spotify}) => {
       
     }
   }, [dispatch,token,selectedPlaylistId]);
-
   return (
     <div className='profileBody-container'>
-      <Header />
-      <Banner img={selectedPlaylist?.image?.url} title="PLAYLIST" subtitle={selectedPlaylist?.name} description={selectedPlaylist?.description}/>
-      <SongsBody tracks={selectedPlaylist?.tracks} spotify={spotify}/>
+      <Header spotify={spotify}/>
+      {(selectedRoote === 'Player') &&
+        <div className='player-container'>
+          <Banner img={selectedPlaylist?.image?.url} title="PLAYLIST" subtitle={selectedPlaylist?.name} description={selectedPlaylist?.description}/>
+          <SongsBody tracks={selectedPlaylist?.tracks} spotify={spotify}/>
+        </div>
+      }
+      {selectedRoote === 'Home' && <Home spotify={spotify} />}
+      {selectedRoote === 'Artist' && <Artist spotify={spotify} />}
+      {selectedRoote === 'AlbumDetails' && <AlbumDetails spotify={spotify} />}
+      {selectedRoote === 'Search' && <Search spotify={spotify} />}
+      {selectedRoote === 'CategoryPlaylists' && <CategoryPlaylists spotify={spotify} />}
+      {selectedRoote === 'SearchResults' && <SearchResults spotify={spotify} />}
+
     </div>
   )
 }

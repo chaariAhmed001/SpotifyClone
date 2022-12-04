@@ -3,12 +3,22 @@ export const initialState = {
   playlists: [],
   selectedPlaylistId: null,
   spotify: null,
-  discover_weekly: null,
   top_artists: null,
   playing: null,
   item: null,
   token: null,
   playerState: false,
+  selectedRoote: "Player",
+  topArtists: null,
+  selectedArtist: null,
+  selectedAlbum: null,
+  searchInput: false,
+  categoryPlayLists: [],
+  SearchResults: [],
+  SearchResultsEp: [],
+  SearchResultsSh: [],
+  ShowMobileMenu: false,
+  ScreenSize: null,
 };
 
 export const reducer = (state, action) => {
@@ -54,7 +64,61 @@ export const reducer = (state, action) => {
         ...state,
         selectedPlaylistId: action.selectedPlaylistId,
       };
-
+    case "SET_ROUTE":
+      return {
+        ...state,
+        selectedRoote: action.selectedRoote,
+      };
+    case "GET_TOPARTISTS":
+      return {
+        ...state,
+        topArtists: action.topArtists,
+      };
+    case "SET_SELECTED_ARTIST":
+      return {
+        ...state,
+        selectedArtist: action.selectedArtist,
+      };
+    case "SET_SELECTED_Album":
+      return {
+        ...state,
+        selectedAlbum: action.selectedAlbum,
+      };
+    case "SET_SEARCHINPUT":
+      return {
+        ...state,
+        searchInput: action.searchInput,
+      };
+    case "SET_CATEGORY_PLAYLIST":
+      return {
+        ...state,
+        categoryPlayLists: action.categoryPlayLists,
+      };
+    case "SET_SEARCH_RESULTS":
+      return {
+        ...state,
+        SearchResults: action.SearchResults,
+      };
+    case "SET_SEARCH_RESULTS_EP":
+      return {
+        ...state,
+        SearchResultsEp: action.SearchResultsEp,
+      };
+    case "SET_SEARCH_RESULTS_SH":
+      return {
+        ...state,
+        SearchResultsSh: action.SearchResultsSh,
+      };
+    case "SET_SHOW_MENU":
+      return {
+        ...state,
+        ShowMobileMenu: action.ShowMobileMenu,
+      };
+    case "SET_SCREENSIZE":
+      return {
+        ...state,
+        ScreenSize: action.ScreenSize,
+      };
     default:
       return state;
   }

@@ -10,6 +10,10 @@
 .sideBar-container::-webkit-scrollbar {
   display: none;
 }
+.header-top{
+  display: flex;
+  align-items: center;
+}
 .sideBare-logo{
     height: 60px;
     padding: 10px;
@@ -25,4 +29,20 @@
     margin-left: 10px;
     padding: 5px;
     font-size: 12px;
+  }
+  .player-modal>.sideBar-container{
+    height: 100vh;
+  }
+  @media only screen and (max-width: 600px) {
+    .palyer-body>.sideBar-container{
+      display: none;
+    }
+    .sideBare-logo{
+      padding: 20px 0px
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .player-modal{
+      display: none;
+    }
   }

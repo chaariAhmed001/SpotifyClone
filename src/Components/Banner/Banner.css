@@ -3,8 +3,8 @@
     align-items: flex-end;
     padding: 10px;
     gap: 20px;
-    padding: 10px;
     max-height: 200px;
+    margin-top: 50px;
 }
 .banner-container img{
     width: 190px;
@@ -14,10 +14,78 @@
 .banner-body{
     flex: 1;
 }
+.banner-body strong{
+    font-size: .75rem;
+}
 .banner-body >h2{
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 10px;
 }
 .banner-body >p{
     font-size: 16px;
+    margin-left: 5px;
+    margin-top: 5px;
+    max-height: 80px;
+    overflow: hidden;
+}
+.banner-title{
+    display: flex;
+    align-items: center;
+    gap:5px
+}
+.verifiedIcon {
+    color: #0d72ea
+}
+.followers{
+    margin-left: 5px;
+}
+.artist-details{
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+.artist-details img{
+    width:24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+@media only screen and (max-width: 600px) {
+    .banner-container{
+        padding: 0px;
+    }
+    .banner-container img {
+        width: 150px;
+        height: 150px;
+    }
+    .banner-body >h2{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .banner-container{
+        padding: 0px;
+    }
+    .banner-container img {
+        width: 180px;
+        height: 180px;
+    }
+    .banner-body >h2{
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .banner-container{
+        padding: 0px;
+    }
+    .banner-container img {
+        width: 180px;
+        height: 180px;
+    }
+    .banner-body >h2{
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
 }

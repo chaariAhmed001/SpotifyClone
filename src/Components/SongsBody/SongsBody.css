@@ -67,3 +67,10 @@
 .song-artists {
     font-size: 0.875rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .songsBody-tracks *.MuiTableContainer-root{
+        margin: 0px 30px;
+        width: 90vw;
+    }
+}

@@ -1,0 +1,25 @@
+.popular-tracks {
+    margin: 40px 0;
+}
+.popular-tracks *.MuiTableCell-root{
+    color: white;
+    
+}
+.popular-tracks >h2{
+    margin: 20px 0;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.albums-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+.fansLikes-container{
+    margin:40px 0px;
+}
+.fansLikes-container >h2 {
+    margin-bottom: 20px;
+}
