@@ -6,6 +6,7 @@
     color: white;
     padding: 0 10px;
     overflow-y: overlay;
+
 }
 .sideBar-container::-webkit-scrollbar {
   display: none;
@@ -30,8 +31,13 @@
     padding: 5px;
     font-size: 12px;
   }
-  .player-modal>.sideBar-container{
+  .player-modal{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .player-modal> .sideBar-container{
     height: 100vh;
+    
   }
   @media only screen and (max-width: 600px) {
     .palyer-body>.sideBar-container{

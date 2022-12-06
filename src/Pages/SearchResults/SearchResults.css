@@ -1,6 +1,8 @@
 .container1{
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
+    margin-bottom: 40px;
 
 }
 .topResult-container{
@@ -74,4 +76,13 @@
     margin: 40px 0px;
     gap: 20px
 }
-
+@media only screen and (max-width: 600px) {
+   
+    .searchResult-container{
+        margin: 30px 20px;
+    }
+    .topResult-container,.songs-container{
+        flex:1
+    }
+}
+  

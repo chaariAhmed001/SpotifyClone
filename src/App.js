@@ -15,7 +15,6 @@ function App() {
     const _token = hash.access_token;
     if (_token) {
       spotify.setAccessToken(_token);
-
       dispatch({
         type: "SET_TOKEN",
         token: _token,
@@ -59,7 +58,7 @@ function App() {
       window.removeEventListener("resize", hanleScreenSize);
     };
   }, []);
-  return <div>{token ? <Player spotify={spotify} /> : <Login />}</div>;
+  return <div>{token !== null ? <Player spotify={spotify} /> : <Login />}</div>;
 }
 
 export default App;

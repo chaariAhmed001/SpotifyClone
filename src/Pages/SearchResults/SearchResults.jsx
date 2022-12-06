@@ -3,7 +3,7 @@ import { FavoriteArtists,Album } from '../../Components';
 import { useStateValue } from '../../Context/StateProvider';
 import './SearchResults.css'
 const SearchResults = ({spotify}) => {
-  const [{ SearchResults,SearchResultsEp,SearchResultsSh }, dispatch] = useStateValue();
+  const [{ SearchResults,SearchResultsEp,SearchResultsSh,ScreenSize }, dispatch] = useStateValue();
 
     const setTime = (ms) =>{
         const min = Math.floor((ms/60000) << 0);
@@ -29,7 +29,7 @@ const SearchResults = ({spotify}) => {
                 <div className='songs-content'>
                     {
                        SearchResults?.tracks?.items?.map((track,index)=>(
-                        index <= 3 &&
+                        (ScreenSize > 900 ? index <=4 : index<=3) &&
                         <div className='track-container' key={index}>
                             <div className='leftSide'>
                                 <img src={track?.album?.images[2].url} alt={track?.name}  />
@@ -50,7 +50,7 @@ const SearchResults = ({spotify}) => {
             <div className='albums-container'>
             {
               SearchResults?.playlists?.items?.map((playList,index)=>(
-                index <=4 &&<Album  key={index} spotify={spotify} id={playList?.id} name={playList?.name} image={playList?.images?.[0].url} type='categoryPlayLists' by={playList?.owner?.display_name}/>
+                (ScreenSize > 900 ? index <=4 : index<=3) &&<Album  key={index} spotify={spotify} id={playList?.id} name={playList?.name} image={playList?.images?.[0].url} type='categoryPlayLists' by={playList?.owner?.display_name}/>
               ))
             }
             </div>
@@ -60,7 +60,7 @@ const SearchResults = ({spotify}) => {
             <div className='albums-container'>
             {
               SearchResults?.albums?.items?.map((album,index)=>(
-                index <=4 &&<Album  key={index} spotify={spotify} id={album?.id} name={album?.name} image={album?.images?.[0].url} releaseDate={album?.release_date} type='categoryPlayLists' />
+                (ScreenSize > 900 ? index <=4 : index<=3) &&<Album  key={index} spotify={spotify} id={album?.id} name={album?.name} image={album?.images?.[0].url} releaseDate={album?.release_date} type='categoryPlayLists' />
               ))
             }
             </div>
@@ -74,7 +74,7 @@ const SearchResults = ({spotify}) => {
             <div className='albums-container'>
             {
               SearchResultsEp?.items?.map((episode,index)=>(
-                index <=4 &&<Album  key={index} spotify={spotify} id={episode?.id} name={episode?.name} image={episode?.images?.[0].url} releaseDate={episode?.release_date} type='episode' />
+                (ScreenSize > 900 ? index <=4 : index<=3) &&<Album  key={index} spotify={spotify} id={episode?.id} name={episode?.name} image={episode?.images?.[0].url} releaseDate={episode?.release_date} type='episode' />
               ))
             }
             </div>
@@ -84,7 +84,7 @@ const SearchResults = ({spotify}) => {
             <div className='albums-container'>
             {
               SearchResultsSh?.map((show,index)=>(
-                index <=4 &&<Album  key={index} spotify={spotify} id={show?.id} name={show?.name} image={show?.images?.[1].url} by={show?.publisher} type='show' />
+                (ScreenSize > 900 ? index <=4 : index<=3) &&<Album  key={index} spotify={spotify} id={show?.id} name={show?.name} image={show?.images?.[1].url} by={show?.publisher} type='show' />
               ))
             }
             </div>

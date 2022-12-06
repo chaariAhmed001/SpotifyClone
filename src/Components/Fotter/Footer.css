@@ -63,3 +63,13 @@
   color: white;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+   .footer-volumContols{
+    display: none;
+   }
+   .fotter-container{
+    display: flex;
+    justify-content: center;
+   }
+  
+}
