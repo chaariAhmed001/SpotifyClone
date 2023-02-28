@@ -1,0 +1,45 @@
+[debug] [2022-12-13T11:54:05.582Z] ----------------------------------------------------------------------
+[debug] [2022-12-13T11:54:05.585Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bohmid\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-12-13T11:54:05.586Z] CLI Version:   11.18.0
+[debug] [2022-12-13T11:54:05.586Z] Platform:      win32
+[debug] [2022-12-13T11:54:05.586Z] Node Version:  v18.12.1
+[debug] [2022-12-13T11:54:05.587Z] Time:          Tue Dec 13 2022 12:54:05 GMT+0100 (West Africa Standard Time)
+[debug] [2022-12-13T11:54:05.587Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-13T11:54:05.672Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-13T11:54:05.673Z] > authorizing via signed-in user (chaari.ahmed001@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Bohmid\Projects\SpotifyClone
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-12-13T11:54:13.053Z] Using project from CLI flag: spotify-clone-df698
+[debug] [2022-12-13T11:54:13.056Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spotify-clone-df698 [none]
+[debug] [2022-12-13T11:54:13.727Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spotify-clone-df698 200
+[debug] [2022-12-13T11:54:13.728Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spotify-clone-df698 {"projectId":"spotify-clone-df698","projectNumber":"990027104466","displayName":"spotify-clone","name":"projects/spotify-clone-df698","resources":{"hostingSite":"spotify-clone-df698"},"state":"ACTIVE","etag":"1_a9082e14-126d-4a3c-8016-a1dde2e72714"}
+[info] i  Using project spotify-clone-df698 (spotify-clone) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
